@@ -1,0 +1,56 @@
+@import "./abstracts/variables";
+
+@import "./base/typography";
+
+@import "./component/header";
+
+* {
+    background: #F7F7F7;
+}
+
+body > #root {
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    margin: 0;
+    
+    ::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+.container {
+    width: 100vh;
+    height: 100vw;
+    transform-origin: top left;
+    transform: rotate(-90deg) translateX(-100vh);
+    overflow-y: scroll;
+
+    @media screen and (max-width: $layout-breakpoints-small) {
+        width: 100vw;
+        height: 100vh;
+        transform: none;
+        overflow-x: scroll;
+    }
+}
+
+.horizontal-scroll-wrapper {
+    width: 400vw;
+    transform-origin: top left;
+    transform: rotate(90deg) translateY(-100vh);
+    display: flex;
+    
+    @media screen and (max-width: $layout-breakpoints-small) {
+        height: 400vh;
+        transform: none;
+        flex-direction: column;
+    }
+}
+
+.frame { 
+    width: 100vw;
+    height: 92vh;
+}
+

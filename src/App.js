@@ -10,6 +10,27 @@ import Contact from "./pages/Contact";
 
 import './sass/main.scss'; 
 
+const firstSpanVariants = {
+  open: { 
+    rotate: 45,
+    y: 5
+  }, 
+  closed: {
+    rotate: 0, 
+    y: 0
+  }
+}
+
+const lastSpanVariants = {
+  open: { 
+    rotate: -45,
+    y: -2
+  }, 
+  closed: {
+    rotate: 0, 
+    y: 0
+  }
+}
 
 
 function App() {
@@ -24,18 +45,22 @@ function App() {
   const contact = useRef(null); 
 
   
-
-
-
   return <>
   <div className="header">
         <div className='nav-bar'>
             <img src={logo} alt="Phoebe Logo"  className='home-logo' onClick = {() => home.current.scrollIntoView({ behavior: 'smooth'})} />
-            <div className='menu-icon' onClick={() => cycleOpen()}>
-                <input className="menu-icon__checkbox" type="checkbox" />
+            <div className='menuIcon' onClick={() => cycleOpen()}>
+                <input className="menuIcon__checkbox" type="checkbox" />
                 <div>
-                    <span></span>
-                    <span></span>
+                    <motion.span 
+                      variants={firstSpanVariants}
+                      animate={open ? "open" : "closed"}
+                      ></motion.span>
+                      <motion.span 
+                      variants={lastSpanVariants}
+                      animate={open ? "open" : "closed"}
+                      whileHover={open ? {width: 22} : {width: 12}}
+                      ></motion.span>
                 </div>
             </div>
             <AnimatePresence>

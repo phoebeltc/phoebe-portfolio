@@ -3,10 +3,8 @@
 @import "./base/typography";
 
 @import "./component/header";
+@import "./component/homepage";
 
-* {
-    background: #F7F7F7;
-}
 
 body > #root {
     height: 100vh;
@@ -41,6 +39,8 @@ body {
     transform-origin: top left;
     transform: rotate(90deg) translateY(-100vh);
     display: flex;
+    height: 100%;
+    background : #f7f7f7;
     
     @media screen and (max-width: $layout-breakpoints-small) {
         height: 400vh;
@@ -51,6 +51,6 @@ body {
 
 .frame { 
     width: 100vw;
-    height: 92vh;
+    height: 100vh;
 }
 

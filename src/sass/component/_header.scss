@@ -11,6 +11,10 @@
     padding: 1.5em 4.25em;
     display: flex;
     justify-content: space-between;
+    background : #f7f7f7;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        padding: 0.7em 2.125em;
+    }
 }
 
 
@@ -101,6 +105,7 @@
     justify-content: center;
     align-items:center;
     flex-direction: column;
+    background : #f7f7f7;
     span {
         display: inline-flex;
         color: $black;

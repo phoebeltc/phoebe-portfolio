@@ -1,0 +1,57 @@
+.frame-homepage { 
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 4.25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid $black;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        padding: 2.125em;
+        border-right: 0;;
+    }
+}
+
+.space-homepage {
+    white-space: pre;
+    @media screen and (max-width: $layout-breakpoint-xsmall) {
+        white-space: normal;
+    }
+}
+
+.footer-homepage {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.scroll {
+    background-color: $yellow;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position:absolute;
+    right: 0;
+    top: -4.8em;
+
+    @media screen and (max-width: $layout-breakpoint-xsmall) {
+        height: 100px;
+        width: 100px;
+        top: -2.8em;
+    }
+}
+
+.image-homepage {
+    position: relative;
+}
+
+.pig-homepage {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    
+}

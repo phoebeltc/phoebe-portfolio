@@ -55,6 +55,7 @@ function App() {
                     <motion.span 
                       variants={firstSpanVariants}
                       animate={open ? "open" : "closed"}
+                      whileHover={{width: 26}}
                       ></motion.span>
                       <motion.span 
                       variants={lastSpanVariants}

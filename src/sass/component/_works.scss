@@ -1,0 +1,62 @@
+.frame-works { 
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    border-right: 1px solid $black;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        padding: 2.125em;
+        border-right: 0;;
+    }
+}
+
+//work 
+.wrapper-work {
+    width: 33.33vw;
+    height: 100vh;
+    border-right: 1px solid $black;
+}
+
+.work-upper {
+    width: 100%;
+    height: 85vh;
+    padding: 6.25em 4.25em 4.25em 4.25em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.work-image {
+    width: 80%; 
+    border-radius: 50px;
+    @media (max-height: 40rem) {
+        display: none;
+    }
+}
+
+.work-tag {
+    border: 1px solid $black;
+    padding: 1em; 
+    border-radius: 50px;
+    width: 5.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.work-lower {
+    height: 15vh;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+    display: flex;
+}
+
+.button-work {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:first-of-type {
+        border-right: 1px solid $black;
+    }
+}

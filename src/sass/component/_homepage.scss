@@ -1,3 +1,9 @@
+@mixin sticker {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+}
+
 .frame-homepage { 
     width: 100vw;
     height: 100vh;
@@ -15,7 +21,7 @@
 
 .space-homepage {
     white-space: pre;
-    @media screen and (max-width: $layout-breakpoint-xsmall) {
+    @media screen and (max-width: $layout-breakpoints-small) {
         white-space: normal;
     }
 }
@@ -49,9 +55,64 @@
     position: relative;
 }
 
+//stickers 
+
 .pig-homepage {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    
+    @include sticker;
+    left: 15vw;
+    top: 60vh;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        left:0;
+        top: 70vh;
+    }
+}
+
+.cooking-homepage {
+    @include sticker;
+    left: 13vw;
+    top: 5vh;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        left: 0;
+        top: 8vh;
+    }
+}
+
+.eye-homepage {
+    @include sticker;
+    right: 0;
+    top: 30vh;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        right: 5vw;
+        top: 40vh;
+    }
+}
+
+.hongkong-homepage {
+    @include sticker;
+    right: 35vw;
+    top: 10vh;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        right:0;
+        top:0;
+    }
+}
+
+.passion-homepage {
+    @include sticker;
+    right: 25vw;
+    top: 30vh;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        right: 18vw;
+        top: 18vh;
+    }
+}
+
+.patient-homepage {
+    @include sticker;
+    right: 13vw;
+    top: 55vh;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        right:0;
+        top: 63vh;
+    }
 }

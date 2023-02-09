@@ -1,50 +1,81 @@
 .frame-works { 
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 5.8rem);
     box-sizing: border-box;
     border-right: 1px solid $black;
+
     @media screen and (max-width: $layout-breakpoints-small) {
         padding: 2.125em;
-        border-right: 0;;
+        border-right: 0;
+        height: 100vh;
     }
 }
 
 //work 
 .wrapper-work {
     width: 33.33vw;
-    height: 100vh;
+    height: 100%;
     border-right: 1px solid $black;
+    display: flex;
+    flex-direction: column;
 }
+
+//work-upper
 
 .work-upper {
     width: 100%;
-    height: 85vh;
-    padding: 6.25em 4.25em 4.25em 4.25em;
+    height: calc(87vh - 5.8rem);
+    padding: 2em 4.25em ;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    
+}
+
+.work-image-block {
+    position: relative;
+}
+
+.work-highlights {
+    position: absolute;
+    font-size: 0.875rem;
+    font-family: $DarkGrotesque;
+    font-weight: 600;
+    background-color: $yellow;
+    width: 170px;
+    height: 170px;
 }
 
 .work-image {
-    width: 80%; 
+    width: 90%; 
+    height: 40vh;
     border-radius: 50px;
+    object-fit: cover;
     @media (max-height: 40rem) {
         display: none;
     }
 }
 
-.work-tag {
-    border: 1px solid $black;
-    padding: 1em; 
-    border-radius: 50px;
-    width: 5.5rem;
+.work-tags {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
+.work-tag {
+    border: 1px solid $black;
+    padding: 0.5em 1.5em; 
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    margin: 0.2em;
+}
+
+//work-lower
+
 .work-lower {
-    height: 15vh;
+    height: 13vh;
     border-top: 1px solid $black;
     border-bottom: 1px solid $black;
     display: flex;

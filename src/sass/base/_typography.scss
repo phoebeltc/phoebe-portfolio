@@ -12,7 +12,7 @@ h1 {
     font-weight: 100;
     margin: 1vw 0;
     @media screen and (min-width: $layout-breakpoints-medium) {
-        font-size: 4.5vw;
+        font-size: 4vw;
     }
     @media screen and (max-width: $layout-breakpoints-small) {
         font-size: 9vw;
@@ -28,6 +28,9 @@ h2 {
     font-size: 4vw;
     font-weight: 100;
     margin: 0;
+    @media screen and (min-width: $layout-breakpoints-large) {
+        font-size: 3vw;
+    }
 }
 
 span {

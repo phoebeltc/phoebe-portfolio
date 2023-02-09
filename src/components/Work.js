@@ -6,14 +6,17 @@ import IPAddress from '../images/IPAddressTracker.png';
 const Work = () => {
     return <>
     <div className="wrapper-work">
-        <div className="work-upper">
-            <div></div>
-            <h2>IP Address Tracker</h2>
-            <div>
-                <img src={IPAddress} alt="IPAddress" className="work-image"></img>
-            </div>
-            <div>
-                <p className="work-tag">HTML</p>
+            <div className="work-upper">
+                <h2>IP Address Tracker</h2>
+                <div className='work-image-block'>
+                    <div className="work-highlights">LATEST WORK</div>
+                    <img src={IPAddress} alt="IPAddress" className="work-image"></img>
+                </div>
+                <div className='work-tags'>
+                    <p className="work-tag">HTML</p>
+                    <p className="work-tag">SCSS</p>
+                    <p className="work-tag">Javascript</p>
+                    <p className="work-tag">API</p>
             </div>
         </div>
         <div className="work-lower">

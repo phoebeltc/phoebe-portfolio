@@ -6,7 +6,7 @@
 
 .frame-homepage { 
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 5.8rem);
     box-sizing: border-box;
     padding: 4.25em;
     display: flex;
@@ -15,7 +15,11 @@
     border-right: 1px solid $black;
     @media screen and (max-width: $layout-breakpoints-small) {
         padding: 2.125em;
-        border-right: 0;;
+        border-right: 0;
+        height: 100vh;
+    }
+    @media (max-height: 40rem) {
+        padding: 2vh 4.25em;
     }
 }
 

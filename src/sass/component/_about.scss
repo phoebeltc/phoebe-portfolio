@@ -1,0 +1,32 @@
+.frame-about { 
+    width: 100vw;
+    height: calc(100vh - 5.8rem);
+    box-sizing: border-box;
+    display: flex;
+    padding-right: 4.25em;
+    border-right: 1px solid $black;
+
+    @media screen and (max-width: $layout-breakpoints-small) {
+
+    }
+}
+
+.about-description {
+    padding: 6em 4.25em 0 4.25em;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-passion {
+    width: 20%;
+    border-left: 1px solid $black;
+}
+
+.about-payattention {
+    width: 20%;
+}
+
+.about-patient {
+    width: 20%;
+}

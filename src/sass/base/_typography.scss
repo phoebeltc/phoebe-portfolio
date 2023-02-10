@@ -31,6 +31,23 @@ h2 {
     @media screen and (min-width: $layout-breakpoints-large) {
         font-size: 3vw;
     }
+    @media (max-height: 20rem) and (min-width: $layout-breakpoints-small){
+        font-size: 2vw;
+    }
+    @media screen and (max-width: $layout-breakpoints-small) {
+        font-size: 9vw;
+        margin: 2vh 0;
+    }
+}
+
+h3 {
+    font-family: $Amarante;
+    font-size: 2vw;
+    font-weight: 100;
+}
+
+h4 {
+    font-family: $DarkGrotesque;
 }
 
 span {

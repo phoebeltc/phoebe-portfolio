@@ -4,6 +4,8 @@ const Works = () => {
     return <>
     <div className="frame-works">
         <Work />
+        <Work />
+        <Work />
     </div> 
     </>
 }

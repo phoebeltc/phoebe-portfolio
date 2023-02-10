@@ -5,6 +5,7 @@
 @import "./component/header";
 @import "./component/homepage";
 @import "./component/works";
+@import "./component/about";
 
 
 body > #root {
@@ -26,6 +27,7 @@ body {
     transform-origin: top left;
     transform: rotate(-90deg) translateX(-100vh);
     overflow-y: scroll;
+    position: relative;
     @media screen and (max-width: $layout-breakpoints-small) {
         width: 100vw;
         height: 100vh;
@@ -41,8 +43,9 @@ body {
     display: flex;
     background : #f7f7f7;
     height: calc(100vh - 5.8rem);
+    position: absolute;
     @media screen and (max-width: $layout-breakpoints-small) {
-        height: 400vh;
+        height: 600vh;
         transform: none;
         flex-direction: column;
     }

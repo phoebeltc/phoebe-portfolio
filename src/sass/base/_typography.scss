@@ -102,3 +102,16 @@ p {
         font-size: 1.1rem;
     }
 }
+
+a {
+    font-size: 0.875rem;
+    font-family: $DarkGrotesque;
+    font-weight: 600;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:visited {
+        color: $black;
+    }
+}

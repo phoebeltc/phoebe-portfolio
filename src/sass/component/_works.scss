@@ -5,7 +5,7 @@
     display: flex;
 
     @media screen and (max-width: $layout-breakpoints-small) {
-        padding: 7em 2.125em 2.125em 2.125em;
+        padding: 7em 2.125em 0 2.125em;
         border-right: 0;
         height: auto;
         flex-direction: column;;

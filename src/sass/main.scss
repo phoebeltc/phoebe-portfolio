@@ -33,6 +33,7 @@ body {
         height: 100vh;
         transform: none;
         overflow-x: scroll;
+        background-color: #f7f7f7;
     }
 }
 
@@ -45,7 +46,6 @@ body {
     height: calc(100vh - 5.8rem);
     position: absolute;
     @media screen and (max-width: $layout-breakpoints-small) {
-        height: 600vh;
         transform: none;
         flex-direction: column;
     }

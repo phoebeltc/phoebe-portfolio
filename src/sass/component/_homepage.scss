@@ -1,14 +1,18 @@
 @mixin sticker {
     position: absolute;
-    width: 120px;
-    height: 120px;
+    width: 8vw;
+    height: auto; 
+    cursor: grab;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        width: 15vh;
+    }
 }
 
 .frame-homepage { 
     width: 100vw;
     height: calc(100vh - 5.8rem);
     box-sizing: border-box;
-    padding: 4.25em;
+    padding: 4.25em 4.25em 1.5em 4.25em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

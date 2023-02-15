@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import passion from '../images/passion.png';
 import patient from '../images/patient.png';
 import eye from '../images/eye.png';
@@ -13,7 +15,22 @@ const About = () => {
                 I enjoy creating beautiful, accessible and responsive websites using HTML, CSS, Tailwind, SASS, SCSS and React. I am currently learning Typescript as well. I combined my web design expertise with front-end development which help to build the website looking close to the design.</h4>
         </div>
         <div className="about-p">
-        <img src={passion} alt="passion" className='smallimg-about'></img>
+        <motion.img src={passion} alt="passion" className='smallimg-about'
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+            default: {
+                duration: 0.3,
+                ease: [0, 0.71, 0.2, 1.01]
+            },
+            scale: {
+                type: "spring",
+                damping: 5,
+                stiffness: 100,
+                restDelta: 0.001
+            }
+            }}
+        />
             <h5>Passion</h5>
             <div className='content-box-about'>
                 <p className='text-about'>I love the process of taking a design and bringing it to life on the web. I enjoy the challenge of creating visually appealing and user-friendly interfaces, and the satisfaction of seeing people interact with my work. 

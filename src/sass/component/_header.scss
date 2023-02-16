@@ -114,6 +114,8 @@
         overflow: hidden;
         text-transform: uppercase;
         cursor: pointer;
+        justify-content: center;
+        align-items: center;
         + span {
             margin-top: 2vw;
         }

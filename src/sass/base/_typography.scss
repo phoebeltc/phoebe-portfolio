@@ -18,8 +18,12 @@ h1 {
         font-size: 5vw;
         margin: 2vh 0;
     }
-    @media screen and (min-width: $layout-breakpoint-xsmall)
-    and (max-width: $layout-breakpoints-small) {
+    @media screen and (max-width: $layout-breakpoint-xsmall) {
+        font-size: 8vw;
+        margin: 2vh 0;
+    }
+    @media screen and (min-width: $layout-breakpoint-xsmall) and 
+    (max-width: $layout-breakpoints-small) {
         font-size: 6vw;
         margin: 2vh 0;
     }

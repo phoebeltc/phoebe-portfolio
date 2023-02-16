@@ -8,7 +8,6 @@
 @import "./component/about";
 @import "./component/contact";
 
-
 body > #root {
     height: 100vh;
     width: 100vw;
@@ -57,3 +56,13 @@ body {
     height: 100vh;
 }
 
+//cursor 
+.cursor {
+    position: fixed; 
+    left: 0;
+    top: 0; 
+    width: 32px; 
+    height: 32px; 
+    border-radius: 16px;
+    background-color: $black; 
+}

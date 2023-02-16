@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { motion, AnimatePresence, useCycle, useScroll, useTransform } from "framer-motion";
 
 import logo from './images/phoebe-logo.svg'; 
@@ -35,6 +35,29 @@ const lastSpanVariants = {
 
 function App() {
 
+  //cursor 
+  // const [cursorXY, setCursorXY] = useState({ x: 0, y: 0})
+  // console.log(cursorXY);
+
+  // useEffect(() => {
+  //   const moveCursor = (e) => {
+  //     setCursorXY({
+  //       x: e.clientX,
+  //       y: e.clientY
+  //     })
+  //   }
+  //   window.addEventListener('mousemove', moveCursor)
+  //   return () => {
+  //     window.removeEventListener('mousemove', moveCursor)
+  //   }
+  // }, [])
+
+  // const variants = {
+  //   default: {
+  //     x: cursorXY.x,
+  //     y: cursorXY.y
+  //   }
+  // }
 
   //Toggle menu icon 
   const [open, cycleOpen] = useCycle(false, true);
@@ -46,6 +69,11 @@ function App() {
 
   
   return <>
+  {/* <motion.div 
+    className="cursor"
+    variants={variants}
+    animate="default"
+  /> */}
   <div className="header">
         <div className='nav-bar'>
             <img src={logo} alt="Phoebe Logo"  className='home-logo' onClick = {() => home.current.scrollIntoView({ behavior: 'smooth'})} />

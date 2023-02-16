@@ -47,7 +47,7 @@ const stickersVariants = {
         scale: 1,
         rotate: 0,
         transition: {
-            delay: (Math.random()),
+            delay: 0,
             duration: 2,
             repeat: Infinity,
             // repeatDelay: 0.2,

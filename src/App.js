@@ -103,9 +103,9 @@ function App() {
                         transition: { delay: 0, duration: 0.3 }
                     }}
                 >
-                    <span onClick ={() => {works.current.scrollIntoView({ behavior: 'smooth'}); cycleOpen()}}>WORKS</span>
-                    <span onClick ={() => {about.current.scrollIntoView({ behavior: 'smooth'}); cycleOpen()}}>ABOUT</span>
-                    <span onClick ={() => {contact.current.scrollIntoView({ behavior: 'smooth'}); cycleOpen()}}>CONTACT</span>
+                    <div className="menu-item" data-replace="WORKS" onClick ={() => {works.current.scrollIntoView({ behavior: 'smooth'}); cycleOpen()}}><span>WORKS</span></div>
+                    <div className="menu-item" data-replace="ABOUT" onClick ={() => {about.current.scrollIntoView({ behavior: 'smooth'}); cycleOpen()}}><span>ABOUT</span></div>
+                    <div className="menu-item" data-replace="CONTACT" onClick ={() => {contact.current.scrollIntoView({ behavior: 'smooth'}); cycleOpen()}}><span>CONTACT</span></div>
                 </motion.div>
                 )
             }

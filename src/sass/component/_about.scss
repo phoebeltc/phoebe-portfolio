@@ -75,6 +75,10 @@
         border-left: 1px solid $black;
         border-right: 1px solid $black;
     }
+    @media screen and (min-width: $layout-breakpoints-small)
+    and (max-width: 1100px) {
+        height: 50%;
+    }
 }
 
 .text-about {

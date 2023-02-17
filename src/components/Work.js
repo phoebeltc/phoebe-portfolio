@@ -1,9 +1,45 @@
 import githubIcon from '../images/github-mark.svg';
 import arrow from '../images/arrow-right.svg';
 import IPAddress from '../images/IPAddressTracker.png';
+import { motion } from 'framer-motion';
+
 
 
 const Work = () => {
+
+        const githubHover = {
+            rest:{
+                x: 0,
+                y: 0
+            },
+            hover: {
+                y: [0, 5],
+            opacity: 1, 
+            scale: 1,
+            rotate: 0,
+            transition: {
+            delay: 0,
+            duration: 0.5,
+            repeat: Infinity,
+            // repeatDelay: 0.2,
+            repeatType: "reverse"
+            }
+            }
+        }
+
+        const arrowHover = {
+            rest:{
+                x: 0,
+                y: 0
+            },
+            hover: {
+                rotate: -45
+            }
+        }
+
+        
+        
+
     return <>
     <div className="wrapper-work">
             <div className="work-upper">
@@ -20,12 +56,14 @@ const Work = () => {
                 </div>
         </div>
         <div className="work-lower">
-            <a href="https://github.com/phoebeltc" target="_blank" className="button-work">
-                <img src={githubIcon} alt="githubIcon" className="button-icon-work"></img>
-            </a>
-            <a href="https://bobbyhadz.com" target="_blank" className="button-work">
-                <img src={arrow} alt="arrow" className="button-icon-work"></img>
-            </a>
+            <motion.a href="https://github.com/phoebeltc" target="_blank" className="button-work"
+                initial="rest" whileHover="hover" animate="rest">
+                <motion.img src={githubIcon} alt="githubIcon" className="button-icon-work" variants={githubHover} ></motion.img>
+            </motion.a>
+            <motion.a href="https://bobbyhadz.com" target="_blank" className="button-work"
+                initial="rest" whileHover="hover" animate="rest">
+                <motion.img src={arrow} alt="arrow" className="button-icon-work" variants={arrowHover}></motion.img>
+            </motion.a>
         </div>
     </div>
     

@@ -59,14 +59,15 @@ const About = () => {
         <motion.div className="about-description" 
             ref={aboutDescriptionRef} 
             initial="hidden"
-            animate={aboutDescriptionInView ? "visible" : "hidden"}
+            whileInView={aboutDescriptionInView ? "visible" : "hidden"}
             variants={textInView}
+            viewport={{ amount: 0.4, once: true }}
         >
             <h3>I ‘m Phoebe.</h3>
             <h4>After working 2 years as a web designer in Hong Kong, I now decided to be a front-end developer in London on exciting ideas and codes.  
                 <br></br>
                 <br></br>
-                I enjoy creating beautiful, accessible and responsive websites using HTML, CSS, Tailwind, SASS, SCSS and React. I am currently learning Typescript as well. I combined my web design expertise with front-end development which help to build the website looking close to the design.</h4>
+                I enjoy creating beautiful, accessible and responsive websites using HTML, CSS, Javascript, Tailwind, SASS, SCSS, React and Framer Motion. I am currently learning Typescript as well. I combined my web design expertise with front-end development which help to build the website looking close to the design.</h4>
         </motion.div>
 
 
@@ -77,13 +78,15 @@ const About = () => {
             <motion.h5
             ref={passionRef}
             initial="hidden"
-            animate={passionInView ? "visible" : "hidden"}
+            whileInView={passionInView ? "visible" : "hidden"}
             variants={textInView}
+            viewport={{ amount: 0.4, once: true }}
             >Passion</motion.h5>
             <motion.div className='content-box-about'
             initial="hidden"
-            animate={passionInView ? "visible" : "hidden"}
+            whileInView={passionInView ? "visible" : "hidden"}
             variants={textInView}
+            viewport={{ amount: 0.4, once: true }}
             >
                 <p className='text-about'>I love the process of taking a design and bringing it to life on the web. I enjoy the challenge of creating visually appealing and user-friendly interfaces, and the satisfaction of seeing people interact with my work. 
                 <br></br><br></br>
@@ -100,13 +103,15 @@ const About = () => {
             <motion.h5 
             ref={payRef}
             initial="hidden"
-            animate={payInView ? "visible" : "hidden"}
-            variants={textInView}>Pay Attention to Detail</motion.h5>
+            whileInView={payInView ? "visible" : "hidden"}
+            variants={textInView}
+            viewport={{ amount: 0.4, once: true }}>Pay Attention to Detail</motion.h5>
             <motion.div className='content-box-about'
             ref={payRef}
             initial="hidden"
-            animate={payInView ? "visible" : "hidden"}
-            variants={textInView}>
+            whileInView={payInView ? "visible" : "hidden"}
+            variants={textInView}
+            viewport={{ amount: 0.4, once: true }}>
                 <p className='text-about'>I pay close attention to detail to ensure that the final product is visually pleasing and user-friendly. I pay attention to the small details such as the spacing, alignment, and color scheme to make sure they are consistent across the website. 
                 <br></br><br></br>
                 I also test the website on different screen sizes and browsers to make sure it looks great and works well for all users. I take pride in my attention to detail and strive to deliver high-quality, polished front-end development work.</p>
@@ -122,14 +127,16 @@ const About = () => {
             <motion.h5
             ref={patientRef}
             initial="hidden"
-            animate={patientInView ? "visible" : "hidden"}
+            whileInView={patientInView ? "visible" : "hidden"}
             variants={textInView}
+            viewport={{ amount: 0.4, once: true }}
             >Patient</motion.h5>
             <motion.div className='content-box-about'
             ref={patientRef}
             initial="hidden"
-            animate={patientInView ? "visible" : "hidden"}
-            variants={textInView}>
+            whileInView={patientInView ? "visible" : "hidden"}
+            variants={textInView}
+            viewport={{ amount: 0.4, once: true }}>
                 <p className='text-about'>I understand that development projects can be complex and often require a significant amount of time and effort. I am able to work with a sense of calm and focus, even when faced with challenges and setbacks. 
                 <br></br><br></br>
                 I am also able to work well with others, and am always willing to lend a hand to my team members when needed. I believe that by being patient and working well with others, I am able to create better and more efficient solutions for the projects I am working on.</p>

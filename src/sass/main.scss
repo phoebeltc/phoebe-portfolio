@@ -32,7 +32,8 @@ body {
         width: 100vw;
         height: 100vh;
         transform: none;
-        overflow-x: scroll;
+        overflow-x: hidden;
+        overflow-y: scroll;
         background-color: #f7f7f7;
     }
 }
@@ -46,6 +47,7 @@ body {
     height: calc(100vh - 5.8rem);
     position: absolute;
     @media screen and (max-width: $layout-breakpoints-small) {
+        width: 100vw;
         transform: none;
         flex-direction: column;
     }

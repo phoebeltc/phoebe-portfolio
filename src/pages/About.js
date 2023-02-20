@@ -114,7 +114,7 @@ const About = () => {
             viewport={{ amount: 0.4, once: true }}>
                 <p className='text-about'>I pay close attention to detail to ensure that the final product is visually pleasing and user-friendly. I pay attention to the small details such as the spacing, alignment, and color scheme to make sure they are consistent across the website. 
                 <br></br><br></br>
-                I also test the website on different screen sizes and browsers to make sure it looks great and works well for all users. I take pride in my attention to detail and strive to deliver high-quality, polished front-end development work.</p>
+                I also test the website on different screen sizes and browsers to make sure it looks great and works well for all users. .</p>
             </motion.div>
         </div>
 
@@ -139,7 +139,7 @@ const About = () => {
             viewport={{ amount: 0.4, once: true }}>
                 <p className='text-about'>I understand that development projects can be complex and often require a significant amount of time and effort. I am able to work with a sense of calm and focus, even when faced with challenges and setbacks. 
                 <br></br><br></br>
-                I am also able to work well with others, and am always willing to lend a hand to my team members when needed. I believe that by being patient and working well with others, I am able to create better and more efficient solutions for the projects I am working on.</p>
+                I believe that by being patient and working well with others, I am able to create better and more efficient solutions for the projects I am working on.</p>
             </motion.div>
         </div>
     </div> 

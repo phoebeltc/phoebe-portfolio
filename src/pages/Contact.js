@@ -58,7 +58,7 @@ const Contact = () => {
                     <a data-replace="Instagram" href="https://www.instagram.com/phoebeltc/" target="_blank" rel="noreferrer" className="smlink-contact"><p>Instagram</p></a>
                     <a data-replace="Github" href="https://github.com/phoebeltc" target="_blank" rel="noreferrer" className="smlink-contact"><p>GitHub</p></a>
                     <a data-replace="LinkedIn" href="https://www.linkedin.com/in/tsz-ching-leung-6b8972bb/" rel="noreferrer" target="_blank" className="smlink-contact"><p>Linkedin</p></a>
-                    <a data-replace="CV" target="_blank" className="smlink-contact" rel="noreferrer"><p>CV</p></a>
+                    <a data-replace="CV" href={process.env.PUBLIC_URL + "/images/PhoebeLeung-CV.pdf"} download target="_blank" className="smlink-contact" rel="noreferrer"><p>CV</p></a>
                 </div>
                 <div>
                     <p>@Phoebe Leung 2023</p>

@@ -158,8 +158,7 @@ const Homepage = () => {
         >
             <motion.h1 variants={child}>HI.</motion.h1>
             <motion.h1 variants={child}>I AM PHOEBE LEUNG.</motion.h1>
-            <motion.h1 variants={child}>FRONT END</motion.h1>
-            <motion.h1 variants={child}>DEVELOPER &amp; DESIGNER </motion.h1>
+            <motion.h1 variants={child}>WEB DESIGNER </motion.h1>
             <motion.h1 variants={child} className="space-homepage">BASED         in LONDON.</motion.h1>
         </motion.div>
         <div className="footer-homepage">

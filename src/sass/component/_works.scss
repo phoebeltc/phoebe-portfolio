@@ -8,7 +8,7 @@
         padding: 7em 2.125em 0 2.125em;
         border-right: 0;
         height: auto;
-        flex-direction: column;;
+        flex-direction: column;
     }
 }
 
@@ -94,19 +94,16 @@
 
 .work-image {
     width: 90%; 
-    height: 40vh;
-    border-radius: 50px;
     object-fit: cover;
     z-index: 0;
+
     @media (max-height: 40rem) {
         display: none;
     }
     @media screen and (max-width: $layout-breakpoints-small) {
-        width: 100%;
-    }
-    @media screen and (min-width: $layout-breakpoints-small) and (max-width: 1460px) {
-        width: 95%;
-        height: 100%
+        
+        width: calc(100% + 4.25em);
+        margin: 1em -2.125em 0;
     }
 }
 
@@ -153,34 +150,17 @@
 
 //work-lower
 
-.work-lower {
-    height: 13%;
-    border-top: 1px solid $black;
-    border-bottom: 1px solid $black;
-    display: flex;
-    @media screen and (max-width: $layout-breakpoints-small) {
-        height: 13vh;
-    }
-}
+// .work-lower {
+//     height: 13%;
+//     border-top: 1px solid $black;
+//     border-bottom: 1px solid $black;
+//     display: flex;
+//     @media screen and (max-width: $layout-breakpoints-small) {
+//         height: 13vh;
+//     }
+// }
 
-.button-work {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    &:first-of-type {
-        border-right: 1px solid $black;
-    }
-
-    @media screen and (max-width: $layout-breakpoints-small) {
-        border-left: 1px solid $black;
-        border-right: 1px solid $black;
-        &:first-of-type {
-            border-right: 0;
-        }
-    }
-}
 
 .button-work-nogithub {
     width: 100%;
@@ -197,6 +177,50 @@
     }
 }
 
+
+
+//updated works 
+
+
+.details {
+    border-top: 1px solid $black;
+    padding: 0.5em 0 2em;
+    &:last-child {
+        border-bottom: 1px solid $black;
+    }
+
+    &_summary {
+        list-style: none; 
+        display: flex;
+        flex-direction: column;
+
+        .summary_title {
+            font-family: $Amarante;
+            font-size: 1.5rem;
+        }
+
+        .summary_type {
+            font-family: $DarkGrotesque;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+    }
+
+    &_content {
+        p:not(:first-child) {
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+    }
+
+    &_link {
+        display: flex;
+        gap: 1em;
+    }
+}
+
+
+
 .button-icon-work {
     width: 38px;
     height: 38px;
@@ -205,8 +229,4 @@
         height: 28px;
     }
 
-    @media (max-height: 40rem) {
-        width: 28px;
-        height: 28px;
-    }
 }

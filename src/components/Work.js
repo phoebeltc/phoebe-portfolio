@@ -6,7 +6,7 @@ import Skill from './Skill';
 
 
 const Work = ({
-    title, image, latestWork, skills, github, link
+    id, title, category, gif, video, highlight, content1, content2, github, link
 }) => {
 
         const ref = useRef(null);
@@ -66,8 +66,39 @@ const Work = ({
         
 
     return <>
-    <div className="wrapper-work">
-            <motion.div className="work-upper"
+        <details className='details' key={id}>
+                    <summary className="details_summary">
+                        <div className='summary_title'>{title}</div>
+                        <div className='summary_type'>{category}</div>
+                    </summary>
+                    {gif &&
+                    <img src={process.env.PUBLIC_URL + gif} alt="" className="work-image"></img>
+                    }
+                    {video &&
+                    <video src={process.env.PUBLIC_URL + video} alt="" className="work-image" autoPlay muted loop />
+                    }
+                    <div className='details_content'>
+                        <p className='content-highlight'>{highlight}</p>
+                        <p>{content1}</p>
+                        <p>{content2} </p>
+                    </div>
+                    <div className='details_link'>
+                    {github &&
+                        <motion.a href={github} target="_blank" className="button-work"
+                            initial="rest" whileHover="hover" animate="rest">
+                            <motion.img src={githubIcon} alt="githubIcon" className="button-icon-work" variants={githubHover} ></motion.img>
+                        </motion.a>
+                    }
+                    {link &&
+                        <motion.a href={link} target="_blank" className={ github ? 'button-work' : 'button-work-nogithub'}
+                            initial="rest" whileHover="hover" animate="rest">
+                            <motion.img src={arrow} alt="arrow" className="button-icon-work" variants={arrowHover}></motion.img>
+                        </motion.a>
+                    }
+                    </div>
+        </details>
+
+            {/* <motion.div className="work-upper"
                 ref={ref} 
                 initial="hidden"
                 whileInView={isInView ? "visible" : "hidden"}
@@ -103,8 +134,7 @@ const Work = ({
                 initial="rest" whileHover="hover" animate="rest">
                 <motion.img src={arrow} alt="arrow" className="button-icon-work" variants={arrowHover}></motion.img>
             </motion.a>
-        </div>
-    </div>
+        </div> */}
     
     </>
 }

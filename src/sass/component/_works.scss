@@ -184,7 +184,7 @@
 
 .details {
     border-top: 1px solid $black;
-    padding: 0.5em 0 2em;
+    padding: 1em 0 2em;
     &:last-child {
         border-bottom: 1px solid $black;
     }
@@ -216,6 +216,10 @@
     &_link {
         display: flex;
         gap: 1em;
+    }
+
+    &_wrapper {
+        transition: height ease 0.2s;
     }
 }
 

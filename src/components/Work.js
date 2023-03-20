@@ -1,13 +1,14 @@
 import githubIcon from '../images/github-mark.svg';
 import arrow from '../images/arrow-right.svg';
 import { motion, useInView } from 'framer-motion';
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Skill from './Skill';
 
 
 const Work = ({
-    id, title, category, gif, video, highlight, content1, content2, github, link
+    id, title, category, gif, video, highlight, content1, content2, github, link, onClick, openIndex, index
 }) => {
+
 
         const ref = useRef(null);
         const isInView = useInView(ref, {once: true}, { amount: "all" }); 
@@ -66,11 +67,15 @@ const Work = ({
         
 
     return <>
-        <details className='details' key={id}>
-                    <summary className="details_summary">
+        <div className='details' key={id}>
+                    <summary className="details_summary" onClick={onClick}>
                         <div className='summary_title'>{title}</div>
                         <div className='summary_type'>{category}</div>
                     </summary>
+                    
+                    {openIndex === id && 
+                    
+                    <div>
                     {gif &&
                     <img src={process.env.PUBLIC_URL + gif} alt="" className="work-image"></img>
                     }
@@ -96,45 +101,10 @@ const Work = ({
                         </motion.a>
                     }
                     </div>
-        </details>
+                    </div>
+                    }
+        </div>
 
-            {/* <motion.div className="work-upper"
-                ref={ref} 
-                initial="hidden"
-                whileInView={isInView ? "visible" : "hidden"}
-                viewport={{ amount: 0.4, once: true }}
-                variants={textInView}
-                >
-                <h2 className="work-title" >{title}</h2>
-                <div className='work-image-block'>
-                    {latestWork &&
-                        <div className="work-highlights" >LATEST<br></br>WORK</div>}
-                    <img src={process.env.PUBLIC_URL + image} alt="IPAddress" className="work-image"></img>
-                </div>
-
-                <div className='work-tags'>
-                {skills.map((item, index) => {
-                    return (
-                        <Skill 
-                            item={item}
-                            key={index}
-                        />
-                    )
-                })}
-                </div>
-
-            </motion.div>
-        <div className="work-lower">
-            { github &&
-            <motion.a href={github} target="_blank" className="button-work"
-                initial="rest" whileHover="hover" animate="rest">
-                <motion.img src={githubIcon} alt="githubIcon" className="button-icon-work" variants={githubHover} ></motion.img>
-            </motion.a>}
-            <motion.a href={link} target="_blank" className={ github ? 'button-work' : 'button-work-nogithub'}
-                initial="rest" whileHover="hover" animate="rest">
-                <motion.img src={arrow} alt="arrow" className="button-icon-work" variants={arrowHover}></motion.img>
-            </motion.a>
-        </div> */}
     
     </>
 }

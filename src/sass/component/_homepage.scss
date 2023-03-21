@@ -38,6 +38,13 @@
     display: flex;
     justify-content: space-between;
     position: relative;
+
+    &-welcome {
+        font-size: 1.1rem;
+        @media screen and (max-width: $layout-breakpoints-small) {
+            font-size: 0.85rem;
+        }
+    }
 }
 
 .scroll {

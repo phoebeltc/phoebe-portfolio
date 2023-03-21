@@ -162,7 +162,7 @@ const Homepage = () => {
             <motion.h1 variants={child} className="space-homepage">BASED         in LONDON.</motion.h1>
         </motion.div>
         <div className="footer-homepage">
-            <p>WELCOME TO My Portfolio Website.</p>
+            <p className="footer-homepage-welcome">WELCOME TO My Portfolio Website.</p>
             <motion.div className="scroll"
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}

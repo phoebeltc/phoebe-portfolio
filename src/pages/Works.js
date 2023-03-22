@@ -313,19 +313,19 @@ const Works = () => {
                 <img src={process.env.PUBLIC_URL + "/images/menya.gif"} alt="MenyaMusashi" className="work-image-desktop"></img>
             )}
             {expanded === "panel2" && (
-                <video src={process.env.PUBLIC_URL + "./images/AngelFace.mp4"} alt="AngelFace" className="work-image-desktop" autoPlay muted loop />
+                <video src={process.env.PUBLIC_URL + "./images/AngelFace.mp4"} alt="AngelFace" className="work-image-desktop" autoPlay muted loop webkit-playsinline playsinline />
             )}
             {expanded === "panel3" && (
-                <video src={process.env.PUBLIC_URL + "./images/IPAddressTracker.mp4"} alt="" className="work-image-desktop" autoPlay muted loop />
+                <video src={process.env.PUBLIC_URL + "./images/IPAddressTracker.mp4"} alt="" className="work-image-desktop" autoPlay muted loop webkit-playsinline playsinline />
             )}
             {expanded === "panel4" && (
-                <video src={process.env.PUBLIC_URL + "./images/News.mp4"} alt="" className="work-image-desktop" autoPlay muted loop />
+                <video src={process.env.PUBLIC_URL + "./images/News.mp4"} alt="" className="work-image-desktop" autoPlay muted loop webkit-playsinline playsinline />
             )}
             {expanded === "panel5" && (
                 <img src={process.env.PUBLIC_URL + "/images/jccac.gif"} alt="" className="work-image-desktop"></img>
             )}
             {expanded === "panel6" && (
-                <video src={process.env.PUBLIC_URL + "./images/TAGtherGoods.mp4"} alt="" className="work-image-desktop" controls />
+                <video src={process.env.PUBLIC_URL + "./images/TAGtherGoods.mp4"} alt="" className="work-image-desktop" controls webkit-playsinline playsinline />
             )}
         </div>
     </div> 

@@ -124,7 +124,7 @@ const Works = () => {
                     className='details_wrapper'
                     >
                     {/* <img src={process.env.PUBLIC_URL + "/images/menya.gif"} alt="" className="work-image"></img> */}
-                    <video src={process.env.PUBLIC_URL + "./images/AngelFace.mp4"} alt="AngelFace" className="work-image" autoPlay muted loop />
+                    <video src={process.env.PUBLIC_URL + "./images/AngelFace.mp4"} alt="AngelFace" className="work-image" autoPlay muted loop webkit-playsinline playsinline />
                     <div className='details_content'>
                         <p className='content-highlight'>Website design with CMS of a beauty company professional</p>
                         <p>AngelFace is a renowned weight loss company based in Hong Kong. They offer a range of services, including weight loss programs, facial treatments, and massage therapy. As the lead designer, I faced numerous challenges in communicating with the client directly throughout the project. However, by paying meticulous attention to detail and maintaining clear communication with the client, I successfully created a corporate website with a CMS.</p>
@@ -165,7 +165,7 @@ const Works = () => {
                     className='details_wrapper'
                     // onClick={()=> console.log(detail2.current.scrollHeight)}
                     >
-                    <video src={process.env.PUBLIC_URL + "./images/IPAddressTracker.mp4"} alt="" className="work-image" autoPlay muted loop />
+                    <video src={process.env.PUBLIC_URL + "./images/IPAddressTracker.mp4"} alt="" className="work-image" autoPlay muted loop webkit-playsinline playsinline />
                     <div className='details_content'>
                         <p className='content-highlight'>An IP Address Tracking app by Using two separate APIs together</p>
                         <p>During my recent API usage practice with JavaScript, I worked on a project that allowed users to search for the details of any IP address or domain. The project involved using LeafletJS initially, but I found it more interesting to change it to the Google Map interface, although the documentation did not provide any instructions for doing so. However, I was able to find a solution by searching on Google.</p>
@@ -197,7 +197,7 @@ const Works = () => {
                     }}>
                         <summary className="details_summary" onClick={handleClick("panel4")}>
                             <div className='summary_title'>News Homepage</div>
-                            <div className='summary_type' ref={detail5}>Web Development</div>
+                            <div className='summary_type' ref={detail5}>Web Development</div> 
                         </summary>
                     </div>
                     
@@ -206,7 +206,7 @@ const Works = () => {
                     className='details_wrapper'
                     // onClick={()=> console.log(detail2.current.scrollHeight)}
                     >
-                    <video src={process.env.PUBLIC_URL + "./images/News.mp4"} alt="" className="work-image" autoPlay muted loop />
+                    <video src={process.env.PUBLIC_URL + "./images/News.mp4"} alt="" className="work-image" autoPlay muted loop webkit-playsinline playsinline />
                     <div className='details_content'>
                         <p className='content-highlight'>A News Homepage by using React and SCSS</p>
                         <p>My goal is to create a news homepage using React as a means to practice utilising the props function and creating duplicate items using function elements. In addition, I plan to develop a systematic file structure for the project. To do this, I've determined the appropriate font size, font weight, and colour through Figma, which will help me create valuable SCSS variables and ensure that I am using H1 and H2 tags consistently. By doing so, I hope to avoid messy coding in CSS and create a more streamlined development process.</p>
@@ -286,7 +286,7 @@ const Works = () => {
                     <div 
                     className='details_wrapper'
                     >
-                    <video src={process.env.PUBLIC_URL + "./images/TAGtherGoods.mp4"} alt="" className="work-image" controls />
+                    <video src={process.env.PUBLIC_URL + "./images/TAGtherGoods.mp4"} alt="" className="work-image" controls webkit-playsinline playsinline />
                     <div className='details_content'>
                         <p className='content-highlight'>Stop-motion video creation</p>
                         <p>TAGather Goods is a rapidly growing fashion brand based in Taiwan that specializes in developing bags and accessories made of PVC canvas sheets. Their approach to design emphasizes the importance of local storytelling and craftsmanship to create stylish and meaningful products. The brand's commitment to quality is reflected in their receipt of the Golden Pin Design Award.</p>

@@ -27,7 +27,6 @@ const Works = () => {
     return <>
     <div className="frame-works" ref={detail1}> 
         <div className='wrapper-work'>
-<<<<<<< HEAD
             <section className="details-group">
 
                 {/* ID1 */}
@@ -299,17 +298,6 @@ const Works = () => {
             {expanded === "panel6" && (
                 <video src={process.env.PUBLIC_URL + "./images/TAGtherGoods.mp4"} alt="" className="work-image-desktop" controls webkit-playsinline playsinline />
             )}
-=======
-            <h6>Check out of my projects!</h6>
-            <div className='works-listing'>
-                <a href={process.env.PUBLIC_URL + "/images/Works-PoliLearn.pdf"} target="_blank"><img src={process.env.PUBLIC_URL + "/images/PoliLearn.png"} alt="PoliLearn" className='responsive'></img></a>
-                <a href={process.env.PUBLIC_URL + "/images/Works-DPD.pdf"} target="_blank"><img src={process.env.PUBLIC_URL + "/images/DRD.png"} alt="DRD" className='responsive' ></img></a>
-                <a href={process.env.PUBLIC_URL + "/images/Works-PoliLearn.pdf"} target="_blank"><img src={process.env.PUBLIC_URL + "/images/Doglivery.png"} alt="Doglivery" className='responsive'></img></a>
-                <a href={"https://www.angelface.com.hk/"} target="_blank"><img src={process.env.PUBLIC_URL + "/images/AngelFace1.png"} alt="AngelFace" className='responsive'></img></a>
-                <a href={process.env.PUBLIC_URL + "/images/Works-PoliLearn.pdf"} target="_blank"><img src={process.env.PUBLIC_URL + "/images/Menya.png"} alt="Menya" className='responsive'></img></a>
-            </div>
-            
->>>>>>> wip-works-layout-change
         </div>
     </div> 
     </>

@@ -39,7 +39,7 @@ body {
 }
 
 .horizontal-scroll-wrapper {
-    width: 400vw;
+    width: calc(400vw - (100vw - 1280px));
     transform-origin: top left;
     transform: rotate(90deg) translateY(calc(-100vh + 5.8rem));
     display: flex;
@@ -50,6 +50,12 @@ body {
         width: 100vw;
         transform: none;
         flex-direction: column;
+    }
+}
+
+.work-div {
+    @media screen and (max-width: $layout-breakpoints-small) {
+        height: auto;
     }
 }
 

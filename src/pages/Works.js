@@ -4,39 +4,15 @@ import arrow from '../images/arrow-right.svg';
 import { useState, useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
+// import PoliLearn from '../images/PoliLearn.png';
+// import DRD from '../images/DRD.png';
+// import Doglivery from '../images/Doglivery.png';
+// import AngelFace from '../images/AngelFace1.png';
+// import Menya from '../images/Menya.png';
 
 
 const Works = () => {
 
-    const githubHover = {
-        rest:{
-            x: 0,
-            y: 0
-        },
-        hover: {
-            y: [0, 5],
-        opacity: 1, 
-        scale: 1,
-        rotate: 0,
-        transition: {
-        delay: 0,
-        duration: 0.5,
-        repeat: Infinity,
-        // repeatDelay: 0.2,
-        repeatType: "reverse"
-        }
-        }
-    }
-
-    const arrowHover = {
-        rest:{
-            x: 0,
-            y: 0
-        },
-        hover: {
-            rotate: -45
-        }
-    }
 
     const [expanded, setExpanded] = useState('panel1');
 
@@ -44,18 +20,14 @@ const Works = () => {
         setExpanded(expanded === panel? false : panel);
     }
 
-    const windowWidth = useRef(window.innerWidth);
     const detail1 = useRef(null);
-    const detail2 = useRef(null);
-    const detail3 = useRef(null);
-    const detail4 = useRef(null);
-    const detail5 = useRef(null);
-    const detail6 = useRef(null);
+
 
 
     return <>
     <div className="frame-works" ref={detail1}> 
         <div className='wrapper-work'>
+<<<<<<< HEAD
             <section className="details-group">
 
                 {/* ID1 */}
@@ -327,6 +299,17 @@ const Works = () => {
             {expanded === "panel6" && (
                 <video src={process.env.PUBLIC_URL + "./images/TAGtherGoods.mp4"} alt="" className="work-image-desktop" controls webkit-playsinline playsinline />
             )}
+=======
+            <h6>Check out of my projects!</h6>
+            <div className='works-listing'>
+                <a href={process.env.PUBLIC_URL + "/images/Works-PoliLearn.pdf"} target="_blank"><img src={process.env.PUBLIC_URL + "/images/PoliLearn.png"} alt="PoliLearn" className='responsive'></img></a>
+                <a href={process.env.PUBLIC_URL + "/images/Works-DPD.pdf"} target="_blank"><img src={process.env.PUBLIC_URL + "/images/DRD.png"} alt="DRD" className='responsive' ></img></a>
+                <a href={process.env.PUBLIC_URL + "/images/Works-PoliLearn.pdf"} target="_blank"><img src={process.env.PUBLIC_URL + "/images/Doglivery.png"} alt="Doglivery" className='responsive'></img></a>
+                <a href={"https://www.angelface.com.hk/"} target="_blank"><img src={process.env.PUBLIC_URL + "/images/AngelFace1.png"} alt="AngelFace" className='responsive'></img></a>
+                <a href={process.env.PUBLIC_URL + "/images/Works-PoliLearn.pdf"} target="_blank"><img src={process.env.PUBLIC_URL + "/images/Menya.png"} alt="Menya" className='responsive'></img></a>
+            </div>
+            
+>>>>>>> wip-works-layout-change
         </div>
     </div> 
     </>

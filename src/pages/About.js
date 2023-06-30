@@ -64,7 +64,7 @@ const About = () => {
             viewport={{ amount: 0.4, once: true }}
         >
             <h3>I ‘m Phoebe.</h3>
-            <h4>After working 2 years as a web designer in Hong Kong, I now decided to be a front-end developer in London on exciting ideas and codes.  
+            <h4>After working 2 years as a web designer in Hong Kong, I now decided to continue my journey in London on exciting ideas with codes.  
                 <br></br>
                 <br></br>
                 I enjoy creating beautiful, accessible and responsive websites using HTML, CSS, Javascript, Tailwind, SASS, SCSS, React and Framer Motion. I am currently learning Typescript as well. I combined my web design expertise with front-end development which help to build the website looking close to the design.</h4>

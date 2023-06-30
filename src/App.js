@@ -117,7 +117,7 @@ function App() {
   <div className="container">
     <div className="horizontal-scroll-wrapper">
       <div ref={home}><Homepage /></div>
-      <div ref={works}><Works /></div>
+      <div ref={works} className="work-div"><Works /></div>
       <div ref={about}><About /></div>
       <div ref={contact}><Contact /></div>
     </div>

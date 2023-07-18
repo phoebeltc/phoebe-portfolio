@@ -294,3 +294,27 @@
     // }
 }
 
+
+//updated works 18 Jul 2023
+.item {
+    min-height: 25rem;
+    min-width: 25rem;
+    padding: 10px;
+}
+
+.item img{
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+}
+
+.inner-carousel {
+    display: flex;
+    background: lightblue;
+}
+
+.carousel {
+    cursor: grab;
+    overflow: hidden;
+    background: orange;
+}

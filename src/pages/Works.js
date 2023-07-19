@@ -3,22 +3,52 @@ import { motion, useInView } from 'framer-motion';
 import images from "../components/Images"; 
 
 const Works = () => {
+
+
+    const [width, setWidth] = useState(0);
+    const carousel = useRef();
+    const [isDragging, setIsDragging] = useState(false);
+    const [isClickAllowed, setIsClickAllowed] = useState(true);
+
+    useEffect(() => {
+        setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+    }, []);
+
+    const handleImageClick = (url) => {
+        if (isClickAllowed) {
+            window.open(url, '_blank'); // Open the link in a new tab if click is allowed
+        }
+    };
+
+    const handleDragStart = () => {
+        setIsDragging(true);
+        setIsClickAllowed(false);
+    };
+
+    const handleDragEnd = () => {
+        setIsDragging(false);
+        setTimeout(() => {
+            setIsClickAllowed(true);
+        }, 200); // Adjust the delay duration as per your preference
+    };
+    
+
     return <>
     <div className="frame-works"> 
         <div className='wrapper-work'>
-            <p>Check out of my projects! XOXO</p>
-            {/* <div className='works-listing'>
-                <a href={process.env.PUBLIC_URL + "/images/Works-PoliLearn.pdf"} target="_blank"><img src={process.env.PUBLIC_URL + "/images/PoliLearn.png"} alt="PoliLearn" className='responsive'></img></a>
-                <a href={process.env.PUBLIC_URL + "/images/Works-DPD.pdf"} target="_blank"><img src={process.env.PUBLIC_URL + "/images/DRD.png"} alt="DRD" className='responsive' ></img></a>
-                <a href={process.env.PUBLIC_URL + "/images/Works-PoliLearn.pdf"} target="_blank"><img src={process.env.PUBLIC_URL + "/images/Doglivery.png"} alt="Doglivery" className='responsive'></img></a>
-                <a href={"https://www.angelface.com.hk/"} target="_blank"><img src={process.env.PUBLIC_URL + "/images/AngelFace1.png"} alt="AngelFace" className='responsive'></img></a>
-                <a href={process.env.PUBLIC_URL + "/images/Works-PoliLearn.pdf"} target="_blank"><img src={process.env.PUBLIC_URL + "/images/Menya.png"} alt="Menya" className='responsive'></img></a>
-            </div> */}
-            <motion.div className='carousel'>
-                <motion.div className='inner-carousel'>
+            <motion.div ref={carousel} className='carousel' whileTap={{cursor: "grabbing"}}>
+                <motion.div 
+                    drag="x" 
+                    dragConstraints={{ right: 0, left: -width }} 
+                    className='inner-carousel'
+                    onDragStart={handleDragStart}
+                    onDragEnd={handleDragEnd}>
+                    <div className='work-title'>
+                        <h5>Check out of my projects!</h5>
+                    </div>
                     {images.map(image => {
                         return(
-                            <motion.div className='item'>
+                            <motion.div className='item' key={image} onClick={() => handleImageClick(process.env.PUBLIC_URL + "/images/Works-PoliLearn.pdf")}>
                                 <img src={image} alt="" />
                             </motion.div>
                         );

@@ -40,17 +40,6 @@
 
 //work-upper
 
-
-.work-title {
-    @media screen and (max-width: $layout-breakpoints-small) {
-        order: 1;
-        border-left: 1px solid $black;
-        border-right: 1px solid $black;
-        margin: 0;
-        padding: 0 0.5em;
-    }
-}
-
 .work-image-block {
     position: relative;
     @media screen and (max-width: $layout-breakpoints-small) {
@@ -302,6 +291,10 @@
     padding: 10px;
     position: relative;
     cursor: pointer;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        max-height: 2rem;
+        min-width: 19rem;
+    }
 }
 
 .item img{
@@ -309,6 +302,10 @@
     height: auto;
     border-radius: 2rem;
     pointer-events: none;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        height: 100%;
+        width: auto;
+    }
 }
 
 .inner-carousel {
@@ -320,5 +317,11 @@
 }
 
 .work-title {
-    width: 25%;
+    white-space: nowrap;
+
+    @media screen and (max-width: $layout-breakpoints-small) {
+        font-size: 1.4rem;
+        white-space: wrap;
+        margin-bottom: 1rem;
+    }
 }

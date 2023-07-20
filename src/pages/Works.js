@@ -37,19 +37,17 @@ const Works = () => {
     <div className="frame-works"> 
         <div className='wrapper-work'>
             <motion.div ref={carousel} className='carousel' whileTap={{cursor: "grabbing"}}>
+            <h3 className='work-title'>CHECK OUT OF MY PROJECTS!</h3>
                 <motion.div 
                     drag="x" 
                     dragConstraints={{ right: 0, left: -width }} 
                     className='inner-carousel'
                     onDragStart={handleDragStart}
                     onDragEnd={handleDragEnd}>
-                    <div className='work-title'>
-                        <h5>Check out of my projects!</h5>
-                    </div>
                     {images.map(image => {
                         return(
-                            <motion.div className='item' key={image} onClick={() => handleImageClick(process.env.PUBLIC_URL + "/images/Works-PoliLearn.pdf")}>
-                                <img src={image} alt="" />
+                            <motion.div className='item' key={image} onClick={() => handleImageClick(image.link)}>
+                                <img src={image.image} alt="" />
                             </motion.div>
                         );
                     })}

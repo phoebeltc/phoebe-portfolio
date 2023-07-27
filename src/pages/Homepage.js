@@ -159,7 +159,7 @@ const Homepage = () => {
             <motion.h1 variants={child}>Hi!</motion.h1>
             <motion.h1 variants={child}>I am PHOEBE LEUNG.</motion.h1>
             <motion.div variants={child} class="vl"></motion.div>
-            <motion.h1 variants={child}>WEB DESIGNER </motion.h1>
+            <motion.h1 variants={child}>UX/UI DESIGNER </motion.h1>
             <motion.h1 variants={child} className="space-homepage">BASED         in LONDON.</motion.h1>
         </motion.div>
         <div className="footer-homepage">

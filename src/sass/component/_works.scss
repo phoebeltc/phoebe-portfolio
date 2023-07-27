@@ -1,5 +1,5 @@
 .frame-works { 
-    width: 1280px;
+    width: 100vw;
     height: calc(100vh - 5.8rem);
     box-sizing: border-box;
     display: flex;
@@ -39,17 +39,6 @@
 }
 
 //work-upper
-
-
-.work-title {
-    @media screen and (max-width: $layout-breakpoints-small) {
-        order: 1;
-        border-left: 1px solid $black;
-        border-right: 1px solid $black;
-        margin: 0;
-        padding: 0 0.5em;
-    }
-}
 
 .work-image-block {
     position: relative;
@@ -294,3 +283,45 @@
     // }
 }
 
+
+//updated works 18 Jul 2023
+.item {
+    min-height: 25rem;
+    min-width: 25rem;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        max-height: 2rem;
+        min-width: 19rem;
+    }
+}
+
+.item img{
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+    pointer-events: none;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        height: 100%;
+        width: auto;
+    }
+}
+
+.inner-carousel {
+    display: flex;
+}
+
+.carousel {
+    overflow: hidden;
+}
+
+.work-title {
+    white-space: nowrap;
+
+    @media screen and (max-width: $layout-breakpoints-small) {
+        font-size: 1.4rem;
+        white-space: wrap;
+        margin-bottom: 1rem;
+    }
+}

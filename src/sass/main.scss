@@ -39,7 +39,7 @@ body {
 }
 
 .horizontal-scroll-wrapper {
-    width: calc(400vw - (100vw - 1280px));
+    width: 400vw;
     transform-origin: top left;
     transform: rotate(90deg) translateY(calc(-100vh + 5.8rem));
     display: flex;

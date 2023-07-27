@@ -1,40 +1,58 @@
-import Work from '../components/Work'
-import githubIcon from '../images/github-mark.svg';
-import arrow from '../images/arrow-right.svg';
 import { useState, useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-
-// import PoliLearn from '../images/PoliLearn.png';
-// import DRD from '../images/DRD.png';
-// import Doglivery from '../images/Doglivery.png';
-// import AngelFace from '../images/AngelFace1.png';
-// import Menya from '../images/Menya.png';
-
+import images from "../components/Images"; 
 
 const Works = () => {
 
 
-    const [expanded, setExpanded] = useState('panel1');
+    const [width, setWidth] = useState(0);
+    const carousel = useRef();
+    const [isDragging, setIsDragging] = useState(false);
+    const [isClickAllowed, setIsClickAllowed] = useState(true);
 
-    const handleClick = (panel) => e => {
-        setExpanded(expanded === panel? false : panel);
-    }
+    useEffect(() => {
+        setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+    }, []);
 
-    const detail1 = useRef(null);
+    const handleImageClick = (url) => {
+        if (isClickAllowed) {
+            window.open(url, '_blank'); // Open the link in a new tab if click is allowed
+        }
+    };
 
+    const handleDragStart = () => {
+        setIsDragging(true);
+        setIsClickAllowed(false);
+    };
 
+    const handleDragEnd = () => {
+        setIsDragging(false);
+        setTimeout(() => {
+            setIsClickAllowed(true);
+        }, 200); // Adjust the delay duration as per your preference
+    };
+    
 
     return <>
-    <div className="frame-works" ref={detail1}> 
+    <div className="frame-works"> 
         <div className='wrapper-work'>
-            <h6>Check out of my projects!</h6>
-            <div className='works-listing'>
-                <a href={process.env.PUBLIC_URL + "/images/Works-PoliLearn.pdf"} target="_blank"><img src={process.env.PUBLIC_URL + "/images/PoliLearn.png"} alt="PoliLearn" className='responsive'></img></a>
-                <a href={process.env.PUBLIC_URL + "/images/Works-DPD.pdf"} target="_blank"><img src={process.env.PUBLIC_URL + "/images/DRD.png"} alt="DRD" className='responsive' ></img></a>
-                <a href={process.env.PUBLIC_URL + "/images/Works-Doglivery.pdf"} target="_blank"><img src={process.env.PUBLIC_URL + "/images/Doglivery.png"} alt="Doglivery" className='responsive'></img></a>
-                <a href={"https://www.angelface.com.hk/"} target="_blank"><img src={process.env.PUBLIC_URL + "/images/AngelFace1.png"} alt="AngelFace" className='responsive'></img></a>
-                <a href={process.env.PUBLIC_URL + "/images/Works-Menya.pdf"} target="_blank"><img src={process.env.PUBLIC_URL + "/images/Menya.png"} alt="Menya" className='responsive'></img></a>
-            </div>
+            <motion.div ref={carousel} className='carousel' whileTap={{cursor: "grabbing"}}>
+            <h3 className='work-title'>CHECK OUT OF MY PROJECTS!</h3>
+                <motion.div 
+                    drag="x" 
+                    dragConstraints={{ right: 0, left: -width }} 
+                    className='inner-carousel'
+                    onDragStart={handleDragStart}
+                    onDragEnd={handleDragEnd}>
+                    {images.map(image => {
+                        return(
+                            <motion.div className='item' key={image} onClick={() => handleImageClick(image.link)}>
+                                <img src={image.image} alt="" />
+                            </motion.div>
+                        );
+                    })}
+                </motion.div>
+            </motion.div>
             
         </div>
     </div> 
